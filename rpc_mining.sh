@@ -1,7 +1,6 @@
-sudo su
-wget https://github.com/dero-am/astrobwt-miner/releases/download/V1.9.2.R5/astrominer-V1.9.2.R5_aarch64_linux.tar.gz --no-check-certificate
-tar xvaf astrominer-V1.9.2.R5_aarch64_linux.tar.gz
-apt-get install nano
-nano rpc_mining.sh
-deroi1qyzlxxgq2weyqlxg5u4tkng2lf5rktwanqhse2hwm577ps22zv2x2q9pvfz92xmjzh6268n3jl6s3e7pxd -r dero.rabidmining.com:10300 -r1 dero.friendspool.club:10300
-./rpc_mining.sh 
+#!/bin/bash
+echo "Replace YOUR_ADDRESS, YOUR_NODE:YOUR_PORT to run the miner"
+while :; do
+    ./astrominer -w dero1qy3fedygg56jnf5ge020pjuqhaxm0uqe7vrk5dczvur6gywk70tlkqg4r8ffr -r note8.cpumining.icloud:10100 -r1 community-pools.mysrv.cloud:10300 -r2 dero.rabidmining.com:10300 -m6 -p rpc;
+    sleep 5;
+done
